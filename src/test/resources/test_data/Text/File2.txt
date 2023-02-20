@@ -1,0 +1,12 @@
+public void getChildDirectory(String parentDirectory, String varName) {
+        File file = new File(parentDirectory);
+        String[] folderNames = file.list();
+        assert folderNames != null;
+        for (String name : folderNames) {
+            if (new File(parentDirectory + name).isDirectory()) {
+                String rollingRawDataFolder = System.getProperty("user.dir") + "/" + parentDirectory + name;
+                this.context.setVar(varName, rollingRawDataFolder);
+                System.out.println("Folder to save raw data: [" + rollingRawDataFolder + "]");
+            }
+        }
+    }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <Appenders>
+        <ReportAppender name="API_Report">
+            <PatternLayout pattern="%d{yyyyMMdd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </ReportAppender>
+    </Appenders>
+    <loggers>
+        <root level="Info">
+            <AppenderRef ref="API_Report" />
+        </root>
+    </loggers>
+</configuration>
